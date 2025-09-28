@@ -13,14 +13,14 @@ font = pygame.font.SysFont(None, 24)  # add a tiny HUD
 GROUND_LEVEL = 300
 GRAVITY = 0.5 
 JUMP_VELOCITY = -8
-POP_SIZE = 1000
+POP_SIZE = 30
 
 # pipes 
 pipe_width = 60 
 pipe_gap = 150 
 pipe_x = WIDTH 
 pipe_height = random.randint(100, 400)
-pipe_speed = 10
+pipe_speed = 5
 
 # population
 population = [[random.uniform(-1, 1) for _ in range(21)] for _ in range(POP_SIZE)]
@@ -83,7 +83,6 @@ for gen in range(100):
                     fitnesses[i] += 1  
                 bird.draw(screen)
 
-        frame_count += 1
         if all_dead: 
             running = False
 

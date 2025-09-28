@@ -55,7 +55,7 @@ def crossover_pair(parent1, parent2):
     child2 = parent2[:point] + parent1[point:]
     return child1, child2
 
-def mutate(genome, mutation_rate=0.1, mutation_strength=0.2):
+def mutate(genome, mutation_rate=0.15, mutation_strength=0.2):
     new_genome = [] 
     for gene in genome: 
         if random.random() < mutation_rate: 
@@ -63,7 +63,7 @@ def mutate(genome, mutation_rate=0.1, mutation_strength=0.2):
         new_genome.append(gene) 
     return new_genome
 
-def next_generation(population, fitnesses, mutation_rate=0.1, mutation_strength=0.2): 
+def next_generation(population, fitnesses, mutation_rate=0.15, mutation_strength=0.2): 
     new_population = [] 
     pop_size = len(population)
 
